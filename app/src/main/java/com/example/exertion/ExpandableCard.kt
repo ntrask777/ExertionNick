@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.exertion.ui.theme.ExertionTheme
 import com.example.exertion.ui.theme.Shapes
 import kotlin.math.exp
 
@@ -69,8 +70,7 @@ fun ExpandableCard(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .weight(6f),
                     text = "My Title",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.titleSmall,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -110,5 +110,7 @@ fun ExpandableCard(modifier: Modifier = Modifier) {
 @Composable
 @Preview
 fun ExpandableCardPreview() {
-    ExpandableCard()
+    ExertionTheme {
+        ExpandableCard()
+    }
 }
