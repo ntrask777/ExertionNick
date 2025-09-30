@@ -63,7 +63,12 @@ class MainActivity : ComponentActivity() {
                     .border(2.dp, Color.Magenta),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    Column(
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        CoilImage()
+                    }
                 }
             }
         }
@@ -78,7 +83,12 @@ fun GreetingPreview() {
             modifier = Modifier.fillMaxSize(),
             color = Color.White
         ) {
-
+            Column(
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                CoilImage()
+            }
         }
     }
 }
