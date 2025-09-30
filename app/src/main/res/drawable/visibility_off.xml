@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="800dp"
+    android:height="800dp"
+    android:viewportWidth="612"
+    android:viewportHeight="612">
+
+    <!-- Solid filled eye -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M608.58,296.2c-1.37,-1.73 -34.27,-42.89 -87.66,-84.51c-71.52,-55.74 -145.83,-85.2 -214.92,-85.2
+            S162.6,155.95 91.08,211.69c-53.39,41.62 -86.29,82.78 -87.66,84.51c-4.56,5.74 -4.56,13.87 0,19.61
+            c1.37,1.73 34.27,42.89 87.66,84.51c71.52,55.74 145.83,85.2 214.92,85.2s143.4,-29.46 214.92,-85.2
+            c53.39,-41.62 86.29,-82.78 87.66,-84.51C613.14,310.06 613.14,301.94 608.58,296.2z"/>
+</vector>

@@ -13,7 +13,7 @@ import coil.request.ImageRequest
 
 // Note: We should use memoization here for the images, so we don't encounter unnecessary loads
 // Obviously I need to change the placeholder image to be same size as logo
-
+// Also need an .error() placeholder
 @Composable
 fun CoilImage() {
     Box(

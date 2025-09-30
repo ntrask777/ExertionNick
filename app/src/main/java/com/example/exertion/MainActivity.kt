@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -65,9 +66,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column(
                         verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.fillMaxSize()
                     ) {
-                        CoilImage()
+                        TextFieldCustom()
+                        Spacer(modifier = Modifier.height(16.dp))
+                        PasswordField()
                     }
                 }
             }
@@ -87,7 +91,7 @@ fun GreetingPreview() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                CoilImage()
+
             }
         }
     }
