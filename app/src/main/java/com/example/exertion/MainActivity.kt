@@ -16,7 +16,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,12 +38,15 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.BaselineShift
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.util.trace
 import com.example.exertion.ui.theme.BLACK_COLOR
 import com.example.exertion.ui.theme.EXERTION_RED
 import com.example.exertion.ui.theme.DARK_GREY
@@ -55,9 +63,7 @@ class MainActivity : ComponentActivity() {
                     .border(2.dp, Color.Magenta),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ExpandableCard(
-                        modifier = Modifier.border(2.dp, Color.Cyan)
-                    )
+
                 }
             }
         }
@@ -70,11 +76,9 @@ fun GreetingPreview() {
     ExertionTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
-            color = Color.Black
+            color = Color.White
         ) {
-            Column(Modifier.fillMaxSize()) {
-                ExpandableCard()
-            }
+
         }
     }
 }
