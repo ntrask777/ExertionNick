@@ -4,16 +4,37 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.example.exertion.data.daily_user_metric_snapshot.DAILY_USER_METRIC_SNAPSHOT_DAO
+import com.example.exertion.data.exercise.EXERCISE_DAO
+import com.example.exertion.data.exercise_metric_snapshot.EXERCISE_METRIC_SNAPSHOT_DAO
+import com.example.exertion.data.personal_analytics.PERSONAL_ANALYTICS
+import com.example.exertion.data.personal_analytics.PERSONAL_ANALYTICS_DAO
+import com.example.exertion.data.rep_entry.REP_ENTRY_DAO
+import com.example.exertion.data.set_entry.SET_ENTRY_DAO
 import com.example.exertion.data.user.USER
 import com.example.exertion.data.user.USER_DAO
+import com.example.exertion.data.workout.WORKOUT_DAO
+import com.example.exertion.data.workout_exercise.WORKOUT_EXERCISE_DAO
+import com.example.exertion.data.workout_metric_snapshot.WORKOUT_METRIC_SNAPSHOT_DAO
 
 @Database(
-    entities = [USER::class],
+    entities = [USER::class, PERSONAL_ANALYTICS::class],
     version = 1,
-    exportSchema = false
+    exportSchema = true
 )
+@TypeConverters(CONVERTERS::class)
 abstract class EXERTION_DB: RoomDatabase() {
     abstract fun userDao(): USER_DAO
+    abstract fun personalAnalyticsDao(): PERSONAL_ANALYTICS_DAO
+    abstract fun exerciseDao(): EXERCISE_DAO
+    abstract fun workoutDao(): WORKOUT_DAO
+    abstract fun workoutExerciseDao(): WORKOUT_EXERCISE_DAO
+    abstract fun setEntryDao(): SET_ENTRY_DAO
+    abstract fun repEntryDao(): REP_ENTRY_DAO
+    abstract fun workoutMetricSnapshotDao(): WORKOUT_METRIC_SNAPSHOT_DAO
+    abstract fun dailyUserMetricSnapshotDao(): DAILY_USER_METRIC_SNAPSHOT_DAO
+    abstract fun exerciseMetricSnapshotDao(): EXERCISE_METRIC_SNAPSHOT_DAO
 
     companion object {
         // writes are visible to other threads

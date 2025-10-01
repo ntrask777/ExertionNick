@@ -5,11 +5,8 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
+import com.example.exertion.data.Gender
 import com.example.exertion.data.user.USER
-
-enum class Gender {
-    MALE, FEMALE, OTHER
-}
 
 @Entity(
     tableName = "PERSONAL_ANALYTICS",
