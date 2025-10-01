@@ -1,4 +1,4 @@
-package com.example.exertion.data
+package com.example.exertion.data.user
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

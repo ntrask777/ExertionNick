@@ -1,4 +1,4 @@
-package com.example.exertion.data
+package com.example.exertion.data.user
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
