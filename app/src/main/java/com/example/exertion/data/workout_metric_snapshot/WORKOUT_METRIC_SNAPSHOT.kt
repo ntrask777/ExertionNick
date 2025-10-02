@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.*
 import com.example.exertion.data.workout.WORKOUT
-import com.example.exertion.data.user.USER
+import com.example.exertion.data.user_table.USERS
 
 @Entity(
     tableName = "WORKOUT_METRIC_SNAPSHOT",
@@ -17,7 +17,7 @@ import com.example.exertion.data.user.USER
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
-            entity = USER::class,
+            entity = USERS::class,
             parentColumns = ["user_id"],
             childColumns = ["user_id"],
             onDelete = ForeignKey.CASCADE

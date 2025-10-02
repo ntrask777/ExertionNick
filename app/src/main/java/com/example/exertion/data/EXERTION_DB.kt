@@ -12,20 +12,22 @@ import com.example.exertion.data.personal_analytics.PERSONAL_ANALYTICS
 import com.example.exertion.data.personal_analytics.PERSONAL_ANALYTICS_DAO
 import com.example.exertion.data.rep_entry.REP_ENTRY_DAO
 import com.example.exertion.data.set_entry.SET_ENTRY_DAO
-import com.example.exertion.data.user.USER
-import com.example.exertion.data.user.USER_DAO
+import com.example.exertion.data.user_table.read_dao.UserReadDao
+import com.example.exertion.data.user_table.UserTable
+import com.example.exertion.data.user_table.write_dao.UserWriteDao
 import com.example.exertion.data.workout.WORKOUT_DAO
 import com.example.exertion.data.workout_exercise.WORKOUT_EXERCISE_DAO
 import com.example.exertion.data.workout_metric_snapshot.WORKOUT_METRIC_SNAPSHOT_DAO
 
 @Database(
-    entities = [USER::class, PERSONAL_ANALYTICS::class],
+    entities = [UserTable::class, PERSONAL_ANALYTICS::class],
     version = 1,
     exportSchema = true
 )
 @TypeConverters(CONVERTERS::class)
 abstract class EXERTION_DB: RoomDatabase() {
-    abstract fun userDao(): USER_DAO
+    abstract fun userReadDao(): UserReadDao
+    abstract fun userWriteDao(): UserWriteDao
     abstract fun personalAnalyticsDao(): PERSONAL_ANALYTICS_DAO
     abstract fun exerciseDao(): EXERCISE_DAO
     abstract fun workoutDao(): WORKOUT_DAO
