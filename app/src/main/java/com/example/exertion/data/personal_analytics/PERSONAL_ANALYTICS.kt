@@ -6,13 +6,13 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.example.exertion.data.Gender
-import com.example.exertion.data.user_table.USERS
+import com.example.exertion.data.user_table.UserTable
 
 @Entity(
     tableName = "PERSONAL_ANALYTICS",
     foreignKeys = [
         ForeignKey(
-            entity = USERS::class,
+            entity = UserTable::class,
             parentColumns = ["user_id"],
             childColumns = ["user_id"],
             onDelete = ForeignKey.CASCADE
